@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Team meeting lead randomizer.">
+  <meta name="keywords" content="Pulp, team, randomizer">
+  <meta name="author" content="Pavel Picka">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+<div class="alert alert-warning text-center">BUG: <strong>first date</strong> is not checked for public holiday</div>
+<header class="container-fluid mb-4">
+  <h1 class="display-2 text-center">Team meeting lead randomizer</h1>
+</header>
+<section class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <h2>Members</h2>
+      <div id="memberList" class="border p-1"></div>
+      <div id="memberControl" class="mt-4 p-2">
+        <input type="button" id="addBtn" value="Add member" class="btn btn-primary btn-lg mr-2" data-bs-toggle="modal" data-bs-target="#addusermodal">
+        <input type="button" id="resetBtn" value="Reset member list" class="btn btn-secondary align-middle">
+      </div>
+    </div>
+    <div class="col">
+      <h2>Options</h2>
+      <form>
+        <div class="form-group">
+          <label for="startDate">Start date:</label>
+          <input type="date" id="startDate" value="2021-01-24" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="emailPeriod">Meeting by mail:</label>
+          <select id="emailPeriod" class="custom-select">
+            <option value="0">No email</option>
+            <option value="2">Every 2 weeks</option>
+            <option value="3">Every 3 weeks</option>
+            <option value="4">Every 4 weeks</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input type="button" id="genBtn" value="Randomize!" class="btn btn-primary btn-lg">
+        </div>
+      </form>
+  </div>
+</section>
+<section class="container mb-4 mt-5">
+  <h2 class="text-center m-3 mb-4" id="shedheader">New schedule</h2>
+  <div id="skips" class="mb-4"></div>
+  <div id="sched" class="mb-4"></div>
+</section>
+</body>
+</html>
