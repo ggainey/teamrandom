@@ -1,11 +1,10 @@
 const localStorage = window.localStorage;
 const defaultMembers = [
-  'pavelpicka', 'anotheruser'
+    'bmbouter', 'dalley', 'ddebrito', 'dkliban', 'ggainey', 'gubben', 'hyagi', 'ipanova', 'lmjachky', 'mdellweg', 'mdepaulo', 'prochad'
 ];
 let membersList = [...defaultMembers].sort();
-// publicHoliday list format month-day 
+// publicHoliday list format month-day
 const publicHolidays = [
-  '01-01', '01-31', '03-29', '06-04', '08-02', '11-28', '12-25'
 ]
 
 const btnAdd = document.querySelector('#addBtn');
@@ -129,7 +128,7 @@ const generateSched = () => {
   shuffleArray(membersList);
   membersList.forEach(item => {
     if (
-        membersList.indexOf(item) % (emailPeriod -1 ) == 0 
+        membersList.indexOf(item) % (emailPeriod -1 ) == 0
         && membersList.indexOf(item) != 0
         && emailPeriod != 0
       ) {
